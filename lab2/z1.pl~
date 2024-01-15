@@ -34,3 +34,14 @@ dwoje_dzieci(Rodzic):-
 wnuk(Osoba,Z):-
 	rodzic(X,Osoba),
 	rodzic(Z,X).
+
+ciotka(Ciotka,Osoba):-
+	rodzic(Rodzic,Osoba),
+	siostra(Ciotka,Rodzic).
+
+nastepca(Nastepca,Osoba):-
+	rodzic(Osoba,Nastepca).
+
+nastepca(Nastepca,Osoba):-
+	rodzic(Osoba,X),
+	nastepca(Nastepca,X).

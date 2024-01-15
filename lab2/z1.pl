@@ -38,3 +38,17 @@ wnuk(Osoba,Z):-
 ciotka(Ciotka,Osoba):-
 	rodzic(Rodzic,Osoba),
 	siostra(Ciotka,Rodzic).
+
+nastepca(Nastepca,Osoba):-
+	rodzic(Osoba,Nastepca).
+
+nastepca(Nastepca,Osoba):-
+	rodzic(Osoba,X),
+	nastepca(Nastepca,X).
+
+przodek(Przodek,Osoba):-
+	rodzic(Przodek,Osoba).
+
+przodek(Przodek,Osoba):-
+	rodzic(Przodek,Y),
+	przodek(Y,Osoba).
